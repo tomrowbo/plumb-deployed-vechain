@@ -29,7 +29,7 @@ const Marketplace: FC = () => {
               <h1 className="text-xl font-bold text-gray-800 mt-2">Plumb Wallet</h1>
        
               <p className="font-semibold text-gray-600 mt-1 flex items-center">
-                balance
+                Balance
               </p>
               <p className="font-bold text-gray-800 mt-1 flex items-center">
                 <Image src="/images/e.png" alt="B3TR Icon" width={24} height={24} className="mr-1" /> {balance} B3TR

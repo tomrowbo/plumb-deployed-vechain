@@ -7,7 +7,7 @@ import { isAndroid } from 'react-device-detect'
 
 const Index = () => {
 	const router = useRouter()
-    const { ammount } = router.query;
+	const { ammount } = router.query;
 	console.log(ammount)
 	const [isInstalled, setIsInstalled] = useState(false)
 	const [installationPrompt, setInstallationPrompt] = useState<any>()
@@ -72,28 +72,27 @@ const Index = () => {
 			<Head>
 				<title>Plumb</title>
 			</Head>
-			<main className='bg-gradient-to-b from-[#ffffff] to-[#ffffff]'>
+			<main className='bg-gradient-to-b from-[#1A1A2E] to-[#6200EA]'>
 				<div className='flex h-screen w-screen flex-col items-center justify-center'>
-					<Blobby />
-					<h2 className='my-4 text-xl font-semibold text-gray-800'>
-						Plumb
+						<Blobby />
+					<h2 className='mt-4 mb-6 text-2xl font-semibold text-white text-center'>
+						Sign in to your account
 					</h2>
-					<div className='mt-2 w-1/2'>
+					<div className='w-full px-8 transform translate-y-32'> {/* Moved the button down */}
 						{!isInstalled && isAndroid ? (
 							<button
-								className='my-4 w-full rounded-md bg-[#673147] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm disabled:bg-[#673147]'
+								className='my-4 w-full rounded-md bg-purple-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm'
 								onClick={promptToInstall}
 							>
 								Install App
 							</button>
 						) : (
 							<button
-								className='my-4 w-full rounded-md bg-[#673147] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm disabled:bg-[#673147] button-epic'
+								className='my-4 w-full rounded-full bg-purple-600 px-4 py-3 text-lg font-bold text-white shadow-lg hover:bg-purple-700'
 								onClick={login}
-								// Always check that Privy is `ready` and the user is not `authenticated` before calling `login`
 								disabled={!ready || authenticated}
 							>
-								Login
+								Log In →
 							</button>
 						)}
 					</div>

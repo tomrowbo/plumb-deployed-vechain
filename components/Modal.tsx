@@ -17,7 +17,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, onClaim, claimAmount }) => {
         <h2 className="text-2xl font-bold mb-4">Claim B3TR</h2>
         <p className="mb-4">You are about to claim {claimAmount} B3TR.</p>
         <button
-          className="bg-[#673147] px-4 py-2 text-white rounded-md hover:bg-[#502638] transition duration-200 ease-in-out"
+          className="bg-blue-600 px-4 py-2 text-white rounded-md hover:bg-blue-200 transition duration-200 ease-in-out"
           onClick={() => {
             onClaim()
             onClose()

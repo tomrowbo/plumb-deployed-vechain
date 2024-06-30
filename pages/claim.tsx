@@ -40,7 +40,7 @@ const Claim: FC = () => {
             <p className="text-sm text-gray-600 mb-1">Your Reward</p>
             <div className="flex items-center">
               <Image src="/images/e.png" alt="Reward Icon" width={24} height={24} className="mr-2" />
-              <p className="text-lg font-bold">20 tokens</p>
+              <p className="text-lg font-bold">{claimAmount} tokens</p>
             </div>
           </div>
           <div className="flex flex-col items-center">
